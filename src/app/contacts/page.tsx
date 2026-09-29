@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import "@/styles/pages/contacts.css";
+import "@/styles/pages/contacts.scss";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactsInfo from "@/components/sections/contacts/ContactsInfo";

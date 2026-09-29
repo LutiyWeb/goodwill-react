@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import "@/styles/pages/who-we-are.css";
+import "@/styles/pages/who-we-are.scss";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhoWeAreHero from "@/components/sections/who-we-are/WhoWeAreHero";

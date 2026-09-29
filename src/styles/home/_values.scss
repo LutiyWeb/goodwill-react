@@ -1,0 +1,127 @@
+@use "../abstracts" as *;
+
+.values {
+  padding-top: 60px;
+  padding-bottom: 100px;
+
+  .container {
+    padding-left: 98px;
+  }
+}
+
+.values_title {
+  margin-left: 0;
+  margin-bottom: 80px;
+}
+
+.values_item {
+  align-items: flex-end;
+  padding-bottom: 30px;
+  border-bottom: 1px solid $color-border;
+  margin-bottom: 80px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+#values_item_1 {
+  margin-bottom: 70px;
+}
+
+#values_item_3 {
+  padding-right: 25px;
+
+  .values_text {
+    max-width: 420px;
+  }
+}
+
+.values_animate {
+  position: relative;
+  margin-right: 115px;
+}
+
+#values_item_1 .values_animate {
+  width: 80px;
+  height: 80px;
+}
+
+#values_item_2 .values_animate {
+  width: 70px;
+  height: 80px;
+  margin-right: 125px;
+}
+
+#values_item_3 .values_animate {
+  width: 108px;
+  height: 72px;
+  margin-right: 90px;
+}
+
+.values_animate img {
+  width: 100%;
+}
+
+.values_item_title {
+  font-weight: normal;
+  line-height: 100%;
+}
+
+.values_text {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+  color: $color-gray;
+  margin-left: auto;
+  max-width: 445px;
+}
+
+@include mobile {
+  .values {
+    padding-top: 50px;
+
+    .container {
+      padding-left: 15px;
+    }
+  }
+
+  .values_title {
+    margin-bottom: 40px;
+  }
+
+  .values_item {
+    display: block;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+  }
+
+  #values_item_1 {
+    margin-bottom: 30px;
+  }
+
+  #values_item_2 {
+    padding-right: 0;
+    overflow: visible;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  #values_item_3 {
+    padding-right: 0;
+  }
+
+  .values_animate {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .values_animate_center {
+    overflow: hidden;
+    height: 90px;
+  }
+
+  .values_item_title {
+    margin-bottom: 15px;
+  }
+}

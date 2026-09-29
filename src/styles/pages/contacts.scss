@@ -1,0 +1,140 @@
+@use "../abstracts" as *;
+
+.page_contacts {
+  overflow: hidden;
+
+  .contacts {
+    padding-top: 180px;
+  }
+
+  .contacts_title {
+    line-height: 100%;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $color-gold;
+    margin-bottom: 85px;
+  }
+
+  .contacts_column {
+    padding-top: 270px;
+    padding-left: 98px;
+    padding-bottom: 80px;
+    background: $color-bg-gray;
+    position: relative;
+
+    &:after {
+      content: "";
+      display: block;
+      background: url(/img/contacts/contacts_figure.svg) no-repeat;
+      background-size: cover;
+      width: 400px;
+      height: 288px;
+      position: absolute;
+      top: 80px;
+      left: 98px;
+    }
+  }
+
+  .column {
+    flex-basis: 50%;
+  }
+
+  .contacts_column_heading {
+    font-weight: 400;
+    line-height: 125%;
+    color: $color-text;
+    margin-bottom: 50px;
+  }
+
+  .contacts_column_body p,
+  .contacts_column_body a {
+    font-size: 20px;
+    line-height: 200%;
+    color: $color-text;
+  }
+
+  .location {
+    max-width: 300px;
+  }
+
+  iframe {
+    width: 100%;
+  }
+
+  .questions {
+    padding-top: 160px;
+  }
+
+  .questions_title_text {
+    text-indent: 98px;
+
+    br {
+      display: none;
+    }
+  }
+
+  @include mobile {
+    .contacts {
+      padding-top: 130px;
+    }
+
+    .contacts_title {
+      margin-bottom: 40px;
+    }
+
+    .contacts_wrapper {
+      flex-direction: column;
+    }
+
+    .column {
+      flex-basis: auto;
+    }
+
+    .contacts_column {
+      padding: 176px 40px 40px;
+
+      &:after {
+        width: 265px;
+        height: 190px;
+        left: 50%;
+        top: 40px;
+        transform: translate(-50%);
+        z-index: 5;
+      }
+    }
+
+    .contacts_column_heading {
+      font-size: 20px;
+      margin-left: 0;
+      margin-bottom: 30px;
+      position: relative;
+      z-index: 10;
+    }
+
+    .contacts_column_body p,
+    .contacts_column_body a {
+      font-size: 16px;
+    }
+
+    .map_column {
+      height: 400px;
+
+      iframe {
+        height: 100%;
+      }
+    }
+
+    .questions {
+      padding-top: 80px;
+    }
+
+    .questions_title {
+      margin-left: 98px;
+    }
+
+    .questions_info_text_btn {
+      margin-top: 37px;
+    }
+  }
+}

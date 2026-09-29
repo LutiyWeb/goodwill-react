@@ -1,0 +1,247 @@
+@use "../abstracts" as *;
+
+.page_for_investors {
+  overflow: hidden;
+
+  .main {
+    padding-top: 180px;
+  }
+
+  .main_title {
+    line-height: 100%;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $color-gold;
+    margin-bottom: 85px;
+  }
+
+  .main_offer {
+    margin-bottom: 80px;
+    max-width: 725px;
+  }
+
+  .general_text {
+    font-weight: normal;
+    line-height: 150%;
+    text-indent: 98px;
+  }
+
+  .gold_word {
+    color: $color-gold;
+    display: inline;
+  }
+
+  .main_img img {
+    width: 100%;
+  }
+
+  .animate {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .animate_title {
+    margin-bottom: 50px;
+  }
+
+  .anim_wrapper {
+    padding-left: 100px;
+  }
+
+  .anim_item {
+    position: relative;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding-bottom: 78px;
+    padding-top: 30px;
+    border-bottom: 1px solid $color-border;
+
+    &:nth-child(5) .anim_item_text {
+      max-width: 460px;
+    }
+
+    &:last-child {
+      padding-bottom: 20px;
+    }
+
+    &:after {
+      content: "";
+      display: block;
+      background: url(/img/for-investors/arrow.svg);
+      width: 36px;
+      height: 26px;
+      position: absolute;
+      bottom: 30px;
+      left: 27px;
+      transform: rotate(90deg);
+    }
+
+    &:last-child:after {
+      display: none;
+    }
+  }
+
+  .anim_item_img img {
+    width: 100%;
+  }
+
+  #animate1 {
+    width: 80px;
+    height: 80px;
+  }
+
+  #animate2,
+  #animate3 {
+    width: 80px;
+    height: 100px;
+  }
+
+  #animate4 {
+    width: 78px;
+    height: 90px;
+  }
+
+  #animate5,
+  #animate6 {
+    width: 80px;
+    height: 86px;
+  }
+
+  .anim_item_title_wrapper {
+    margin-left: 112px;
+    flex-shrink: 0;
+  }
+
+  .anim_item_title {
+    font-size: 20px;
+    line-height: 125%;
+    color: $color-text;
+    max-width: 360px;
+  }
+
+  .animate_step {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $color-gold;
+    margin-bottom: 10px;
+  }
+
+  .anim_item_text {
+    margin-left: auto;
+    max-width: 455px;
+    position: relative;
+
+    p {
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 150%;
+      color: $color-gray;
+      margin-bottom: 26px;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .marker_text {
+    padding-left: 24px;
+
+    &:before {
+      content: "";
+      display: block;
+      background: url(/img/for-investors/item_small.svg) no-repeat;
+      width: 12px;
+      height: 12px;
+      position: absolute;
+      margin-top: 6px;
+      left: 0;
+    }
+  }
+
+  .questions_title_text {
+    text-indent: 98px;
+
+    br {
+      display: none;
+    }
+  }
+
+  .pop_up_title {
+    text-indent: 0;
+  }
+
+  @include mobile {
+    .main {
+      padding-top: 130px;
+    }
+
+    .main_title {
+      margin-bottom: 40px;
+    }
+
+    .main_offer {
+      margin-bottom: 40px;
+    }
+
+    .animate {
+      padding-top: 49px;
+      padding-bottom: 0;
+    }
+
+    .animate_title {
+      margin-bottom: 0;
+      margin-left: 0;
+      font-size: 10px;
+    }
+
+    .anim_wrapper {
+      padding-left: 0;
+    }
+
+    .anim_item {
+      display: block;
+      padding-top: 40px;
+      padding-bottom: 78px;
+
+      &:after {
+        bottom: 20px;
+      }
+    }
+
+    .anim_item_img {
+      margin-bottom: 40px;
+    }
+
+    .anim_item_title_wrapper {
+      margin-left: 0;
+    }
+
+    .animate_step {
+      font-size: 10px;
+    }
+
+    .anim_item_title {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .anim_item_text {
+      font-size: 13px;
+      margin-left: 0;
+
+      p {
+        margin-bottom: 16px;
+        font-size: 13px;
+      }
+    }
+
+    .questions_info_text_btn {
+      margin-top: 37px;
+    }
+  }
+}

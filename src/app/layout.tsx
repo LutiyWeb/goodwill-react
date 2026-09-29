@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "../styles/normalize.css";
-import "../styles/main.css";
+import "../styles/main.scss";
 import MotionProvider from "@/components/MotionProvider";
 
 export const metadata: Metadata = {

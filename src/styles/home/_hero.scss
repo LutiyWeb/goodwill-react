@@ -1,0 +1,90 @@
+@use "../abstracts" as *;
+
+.main {
+  position: relative;
+  overflow: hidden;
+}
+
+.main_bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(/img/main-bg.png) no-repeat center;
+  background-size: cover;
+}
+
+.offer_logo_mask {
+  overflow: hidden;
+  margin-bottom: 48px;
+
+  .offer_logo {
+    display: block;
+    margin-bottom: 0;
+  }
+}
+
+.offer_word {
+  display: inline-block;
+
+  &:not(:last-child) {
+    margin-right: 0.25em;
+  }
+}
+
+.offer_line {
+  width: 120px;
+  height: 1px;
+  margin: 30px auto 0;
+  background: $color-gold;
+}
+
+.ovarlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(35, 31, 32, 0.2) 0%, rgba(35, 31, 32, 0.4) 100%);
+}
+
+.offer {
+  padding: 309px 0;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+.offer_logo {
+  margin-bottom: 48px;
+  width: 100%;
+}
+
+#offer_text {
+  font-size: 200px;
+}
+
+.description_text {
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 100%;
+  text-align: center;
+  color: $color-border;
+}
+
+@include mobile {
+  .offer {
+    padding-top: 348px;
+    padding-bottom: 266px;
+  }
+
+  .offer_logo_mask {
+    margin-bottom: 30px;
+  }
+
+  .description_text {
+    font-size: 24px;
+  }
+}

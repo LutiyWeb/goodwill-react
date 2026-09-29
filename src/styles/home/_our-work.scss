@@ -1,0 +1,81 @@
+@use "../abstracts" as *;
+
+.our_work .container {
+  padding-bottom: 140px;
+  padding-top: 100px;
+  background: url(/img/figure2.svg) no-repeat bottom right;
+}
+
+.title_text_wrapper_work {
+  margin-bottom: 80px;
+}
+
+.activities_title_text {
+  max-width: 750px;
+}
+
+.our_work_info {
+  padding-right: 98px;
+  padding-left: 98px;
+}
+
+.our_work_info_text_up {
+  margin-bottom: 30px;
+}
+
+.our_work_info_text {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+  color: $color-gray;
+  max-width: 450px;
+}
+
+.our_work_info_text_down {
+  margin-bottom: 48px;
+}
+
+.our_work_info_img {
+  margin-left: auto;
+}
+
+@include mobile {
+  .our_work .container {
+    padding-bottom: 35px;
+    padding-top: 100px;
+    background: url(/img/figure2_resp.svg) no-repeat bottom right;
+  }
+
+  .title_text_wrapper_work {
+    margin-bottom: 45px;
+  }
+
+  .our_work_info {
+    display: block;
+    padding: 0;
+  }
+
+  .our_work_info_img {
+    margin-left: 0;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .our_work_info_text {
+    font-size: 13px;
+  }
+
+  .our_work_info_text_up {
+    margin-bottom: 20px;
+  }
+
+  .our_work_info_text_down {
+    margin-bottom: 30px;
+  }
+
+  .our_work_info_text_wrapper {
+    margin-bottom: 96px;
+  }
+}

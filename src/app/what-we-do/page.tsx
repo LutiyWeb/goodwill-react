@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import "@/styles/pages/what-we-do.css";
+import "@/styles/pages/what-we-do.scss";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatWeDoHero from "@/components/sections/what-we-do/WhatWeDoHero";

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import "@/styles/pages/for-investors.css";
+import "@/styles/pages/for-investors.scss";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import InvestorsHero from "@/components/sections/for-investors/InvestorsHero";
