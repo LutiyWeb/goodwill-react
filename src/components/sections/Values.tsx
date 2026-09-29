@@ -1,6 +1,5 @@
 import * as motion from "motion/react-client";
-import type { Variants } from "motion/react";
-import { VIEWPORT, fadeUp, fadeUpDelayed } from "@/lib/animations";
+import { VIEWPORT, fadeUp, fadeUpDelayed, popIn } from "@/lib/animations";
 
 const VALUES = [
   {
@@ -23,12 +22,6 @@ const VALUES = [
   },
 ];
 
-// Icon pops in on a spring after its row has started to rise
-const iconVariants: Variants = {
-  hidden: { opacity: 0, scale: 0.4 },
-  visible: { opacity: 1, scale: 1, transition: { type: "spring", stiffness: 260, damping: 14, delay: 0.3 } },
-};
-
 export default function Values() {
   return (
     <section className="values">
@@ -43,7 +36,6 @@ export default function Values() {
           values
         </motion.span>
         <div className="values_group">
-          {/* Each row triggers on its own (rows are far apart on mobile); the delay staggers them on desktop */}
           {VALUES.map((item, index) => (
             <motion.div
               key={item.title}
@@ -54,7 +46,7 @@ export default function Values() {
               whileInView="visible"
               viewport={VIEWPORT}
             >
-              <motion.div className={item.animateClassName} variants={iconVariants}>
+              <motion.div className={item.animateClassName} variants={popIn}>
                 <img src={item.image} alt="" />
               </motion.div>
               <h2 className="values_item_title">{item.title}</h2>
