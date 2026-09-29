@@ -8,7 +8,6 @@ type PopupProps = {
   onClose: () => void;
 };
 
-// AnimatePresence keeps the popup mounted until its exit animation finishes
 export default function Popup({ open, onClose }: PopupProps) {
   return (
     <AnimatePresence>

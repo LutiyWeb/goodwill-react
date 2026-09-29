@@ -39,7 +39,7 @@ export default function Questions() {
               viewport={VIEWPORT}
             >
               <motion.h2 className="questions_title_text title_text" variants={fadeUp}>
-                We are always in touch and ready to provide you with advice, assistance <br /> and support
+                We are always in touch and ready to provide you with advice, assistance <br /> and&nbsp;support
               </motion.h2>
               <motion.div className="questions_img" variants={revealFromLeft}>
                 <motion.img src="/img/questios_image.jpg" alt="" variants={imageSettle} />

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const MENU_ITEMS = [
   { href: "/", label: "Main" },
@@ -14,7 +15,10 @@ const MENU_ITEMS = [
 export default function Header() {
   const [navOpen, setNavOpen] = useState(false);
   const [activeLang, setActiveLang] = useState<"ru" | "eng">("eng");
-  const [activeMenuIndex, setActiveMenuIndex] = useState(0);
+  const pathname = usePathname();
+  const [activeMenuIndex, setActiveMenuIndex] = useState(() =>
+    Math.max(0, MENU_ITEMS.findIndex((item) => item.href === pathname))
+  );
 
   const toggleNav = () => setNavOpen((prev) => !prev);
 

@@ -17,7 +17,6 @@ export default function About() {
             </h2>
           </motion.div>
         </motion.div>
-        {/* The trigger sits on the unclipped parent: a fully clipped element never counts as "in view" */}
         <motion.div className="about_info d-flex" initial="hidden" whileInView="visible" viewport={VIEWPORT}>
           <motion.div className="about_info_img" variants={revealFromLeft}>
             <motion.img src="/img/about_image.jpg" alt="" variants={imageSettle} />

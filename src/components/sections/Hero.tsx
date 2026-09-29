@@ -6,7 +6,6 @@ import { EASE_OUT } from "@/lib/animations";
 
 const SLOGAN_WORDS = "Your growth is our passion".split(" ");
 
-// Parent orchestrates the order: logo -> slogan words -> gold line
 const offerVariants: Variants = {
   hidden: {},
   visible: { transition: { delayChildren: 0.3, staggerChildren: 0.4 } },
@@ -35,7 +34,6 @@ const lineVariants: Variants = {
 export default function Hero() {
   const heroRef = useRef<HTMLElement>(null);
 
-  // 0 when the hero top touches the viewport top, 1 when the hero bottom leaves it
   const { scrollYProgress } = useScroll({ target: heroRef, offset: ["start start", "end start"] });
   const bgY = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
   const offerY = useTransform(scrollYProgress, [0, 1], [0, 150]);

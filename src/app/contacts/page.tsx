@@ -1,10 +1,21 @@
 import type { Metadata } from "next";
-import ComingSoon from "@/components/ComingSoon";
+import "@/styles/pages/contacts.css";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import ContactsInfo from "@/components/sections/contacts/ContactsInfo";
+import Questions from "@/components/sections/Questions";
 
 export const metadata: Metadata = {
-  title: "Goodwill | Contact us",
+  title: "Goodwill | Contacts",
 };
 
 export default function ContactsPage() {
-  return <ComingSoon title="Contact us" />;
+  return (
+    <div className="page page_contacts">
+      <Header />
+      <ContactsInfo />
+      <Questions />
+      <Footer />
+    </div>
+  );
 }

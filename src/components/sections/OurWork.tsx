@@ -17,7 +17,6 @@ export default function OurWork() {
             </h2>
           </motion.div>
         </motion.div>
-        {/* Mirror of About: text comes first, the photo opens from the right */}
         <motion.div className="our_work_info d-flex" initial="hidden" whileInView="visible" viewport={VIEWPORT}>
           <motion.div className="our_work_info_text_wrapper info_text_wrapper" variants={stagger(0.2)}>
             <motion.p className="our_work_info_text_up our_work_info_text" variants={fadeUp}>
